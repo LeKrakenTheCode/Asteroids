@@ -4,6 +4,7 @@ from shot import *
 
 class Player(CircleShape):
     def __init__(self, x, y):
+        pygame.sprite.Sprite.__init__(self, self.containers)
         super().__init__(x, y, PLAYER_RADIUS)
         self.rotation = 0
         self.shot_cooldown = 0
